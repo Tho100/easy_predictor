@@ -1,6 +1,6 @@
 # Easy Predictor 
 
-Perform regression prediction on small Excel dataset in one line!
+Perform regression/classifcation prediction on small Excel dataset in one line!
 
 # Side Note
 
