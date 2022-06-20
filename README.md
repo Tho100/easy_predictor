@@ -8,6 +8,12 @@ Currently only two columns are allowed be use on the prediction (Independent & D
 
 ## Instruction
 
+0. Installation
+
+```
+pip install easy-predictor
+```
+
 1. Linear Regression Prediction
 
 ```python
