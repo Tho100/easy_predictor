@@ -34,15 +34,19 @@ classification.predict(dataset,column_x,column_y,value: str)
 
 ## Result (Linear)
 ```python
+from easy_predictor import linear
+
 dataset = "C:\\users\\USER\\Documents\\Dataset_file\\scores_pred.xlsx"
-predict(dataset,'Study Hour','Scores',15)
+linear.predict(dataset,'Study Hour','Scores',15)
 OUTPUT: [[62.]]
 ```
 
 ## Result (Classification)
 ```python
+from easy_predictor import classification
+
 dataset = "C:\\users\\USER\\Documents\\Dataset_file\\sentiment_tf.xlsx"
-predict(dataset,'Text','Sentiment','Hatred')
+classification.predict(dataset,'Text','Sentiment','Hatred')
 
 OUTPUT: ['NEGATIVE']
 ```
