@@ -32,7 +32,7 @@ dataset = "path_to_excel_file"
 classification.predict(dataset,column_x,column_y,value: str)
 ```
 
-## Result (Linear)
+## Example (Linear Regression)
 ```python
 from easy_predictor import linear
 
@@ -41,7 +41,7 @@ linear.predict(dataset,'Study Hour','Scores',15)
 OUTPUT: [[62.]]
 ```
 
-## Result (Classification)
+## Example (Classification)
 ```python
 from easy_predictor import classification
 
