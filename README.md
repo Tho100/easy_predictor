@@ -67,5 +67,15 @@ from easy_predictor import table
 dataset = "C:\\users\\USER\\Documents\\Dataset_file\\scores_pred.xlsx"
 table.tabulator(dataset,'xlsx',columns=['Hour Study','Scores'])
 
-OUTPUT:   
+OUTPUT:       
+
+     Hour Study    Scores
+--  ------------  --------
+ 0           2          10
+ 1           2.5        12
+ 2           3          14
+ 3           3.5        16
+ 4           4          18
+ 5           4.5        20
+
 ```
