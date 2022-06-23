@@ -32,6 +32,15 @@ dataset = "path_to_excel_file"
 classification.predict(dataset,column_x,column_y,value: str)
 ```
 
+3. Visualize Excel Data In Tabular Form
+
+```python
+from easy_prediction import table 
+
+dataset = "path_to_excel_file"
+table.tabulator(dataset,dtype: str,columns=list[str])
+```
+
 ## Example (Linear Regression)
 ```python
 from easy_predictor import linear
@@ -49,4 +58,14 @@ dataset = "C:\\users\\USER\\Documents\\Dataset_file\\sentiment_tf.xlsx"
 classification.predict(dataset,'Text','Sentiment','Hatred')
 
 OUTPUT: ['NEGATIVE']
+```
+
+## Example (Data Visualization)
+```python
+from easy_predictor import table 
+
+dataset = "C:\\users\\USER\\Documents\\Dataset_file\\scores_pred.xlsx"
+table.tabulator(dataset,'xlsx',columns=['Hour Study','Scores'])
+
+OUTPUT:   
 ```
