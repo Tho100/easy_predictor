@@ -21,7 +21,7 @@ pip install easy-predictor
 from easy_predictor import linear 
 
 dataset = "path_to_excel_file"
-linear.predict(dataset,column_x,column_y,value: int)
+linear.predict(dataset,dtype: str,column_x,column_y,value: int)
 ```
 2. Text Classification Prediction
 
@@ -29,7 +29,7 @@ linear.predict(dataset,column_x,column_y,value: int)
 from easy_predictor import classification
 
 dataset = "path_to_excel_file"
-classification.predict(dataset,column_x,column_y,value: str)
+classification.predict(dataset,dtype: str,column_x,column_y,value: str)
 ```
 
 3. Visualize Excel Data In Tabular Form
@@ -46,7 +46,7 @@ table.tabulator(dataset,dtype: str,columns=list[str])
 from easy_predictor import linear
 
 dataset = "C:\\users\\USER\\Documents\\Dataset_file\\scores_pred.xlsx"
-linear.predict(dataset,'Study Hour','Scores',15)
+linear.predict(dataset,'xlsx,'Study Hour','Scores',15)
 OUTPUT: [[62.]]
 ```
 
@@ -55,7 +55,7 @@ OUTPUT: [[62.]]
 from easy_predictor import classification
 
 dataset = "C:\\users\\USER\\Documents\\Dataset_file\\sentiment_tf.xlsx"
-classification.predict(dataset,'Text','Sentiment','Hatred')
+classification.predict(dataset,'xlsx,'Text','Sentiment','Hatred')
 
 OUTPUT: ['NEGATIVE']
 ```
