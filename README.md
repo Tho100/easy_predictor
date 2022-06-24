@@ -25,7 +25,7 @@ linear.predict(dataset,dtype: str,[column_x],value: int,column_y)
 from easy_predictor import classification
 
 dataset = "path_to_excel_file"
-classification.predict(dataset,dtype: str,column_x: list[str],value: str,column_y)
+classification.predict(dataset,dtype: str,column_x: list[str],value: list[str],column_y)
 ```
 
 3. Visualize Excel Data In Tabular Form
