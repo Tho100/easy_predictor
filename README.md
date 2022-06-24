@@ -3,10 +3,6 @@
 
 Perform regression/classifcation prediction on small Excel dataset in one line!
 
-# Side Note
-
-Currently only two columns are allowed be use on the prediction (Independent & Dependent variable).
-
 ## Instruction
 
 0. Installation
@@ -21,7 +17,7 @@ pip install easy-predictor
 from easy_predictor import linear 
 
 dataset = "path_to_excel_file"
-linear.predict(dataset,dtype: str,column_x,column_y,value: int)
+linear.predict(dataset,dtype: str,[column_x],value: int,column_y)
 ```
 2. Text Classification Prediction
 
@@ -29,7 +25,7 @@ linear.predict(dataset,dtype: str,column_x,column_y,value: int)
 from easy_predictor import classification
 
 dataset = "path_to_excel_file"
-classification.predict(dataset,dtype: str,column_x,column_y,value: str)
+classification.predict(dataset,dtype: str,column_x: list[str],value: str,column_y)
 ```
 
 3. Visualize Excel Data In Tabular Form
