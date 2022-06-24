@@ -42,7 +42,11 @@ table.tabulator(dataset,dtype: str,columns=list[str])
 from easy_predictor import linear
 
 dataset = "C:\\users\\USER\\Documents\\Dataset_file\\scores_pred.xlsx"
-linear.predict(dataset,'xlsx,'Study Hour','Scores',15)
+linear.predict(dataset,
+              data_type='xlsx',
+              input_col=['Study Hour'],
+              value=[15]
+              output_col='Scores')
 OUTPUT: [[62.]]
 ```
 
@@ -55,7 +59,7 @@ classification.predict(dataset,
                       data_type='xlsx',
                       input_col=['Text'],
                       value=['I hate it!'],
-                      'Sentiment')
+                      output_col='Sentiment')
 
 OUTPUT: ['NEGATIVE']
 ```
