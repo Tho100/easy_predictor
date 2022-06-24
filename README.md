@@ -1,7 +1,7 @@
 ![Screenshot_10](https://user-images.githubusercontent.com/64541739/174754962-952e3e72-0b2c-4ae6-987d-9f46c965e5c4.png)
 
 
-Perform regression/classifcation prediction on small Excel dataset in one line!
+Perform regression/classifcation prediction on Excel dataset.
 
 ## Instruction
 
