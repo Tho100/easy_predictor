@@ -17,7 +17,7 @@ pip install easy-predictor
 from easy_predictor import linear 
 
 dataset = "path_to_excel_file"
-linear.predict(dataset,dtype: str,[column_x],value: int,column_y)
+linear.predict(dataset,dtype: str,column_x: list[str],value: list[int],column_y)
 ```
 2. Text Classification Prediction
 
@@ -51,9 +51,33 @@ OUTPUT: [[62.]]
 from easy_predictor import classification
 
 dataset = "C:\\users\\USER\\Documents\\Dataset_file\\sentiment_tf.xlsx"
-classification.predict(dataset,'xlsx,'Text','Sentiment','Hatred')
+classification.predict(dataset,
+                      data_type='xlsx',
+                      input_col=['Text'],
+                      value=['I hate it!'],
+                      'Sentiment')
 
 OUTPUT: ['NEGATIVE']
+```
+# Multiple Inputs (Classification)
+```python
+classification.predict(dataset,
+                      'xlsx',
+                       input_col=['Text'],
+                       value=['Good stuff','Very Bad','Awesome'],
+                       output_col='Sentiment')
+                       
+OUTPUT: ['POSITIVE','NEGATIVE','POSITIVE']
+```
+# Multiple Inputs (Linear Regression)
+```python
+linear.predict(dataset,
+              'xlsx',
+              input_col=['Study Hour'],
+              value=[12.2,5,9],
+              output_col='Scores')
+              
+OUTPUT: [103,55,80]
 ```
 
 ## Example (Data Visualization)
