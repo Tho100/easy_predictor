@@ -103,3 +103,10 @@ OUTPUT:
  5           4.5        20
 
 ```
+
+## Statistical Calculation 
+
+**Mean**
+
+```python
+from easy_predictor import 
