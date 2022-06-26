@@ -104,9 +104,46 @@ OUTPUT:
 
 ```
 
-## Statistical Calculation 
+# Statistical Calculation 
+
+## Available Statistical Function
+
+- Mean
+- Median
+- Mode
 
 **Mean**
 
 ```python
-from easy_predictor import 
+from easy_predictor import stats
+
+dataset = "path_to_excel"
+stats.mean(dataset,dtype: str,column=['Column1']) 
+```
+
+**Median**
+
+```python
+from easy_predictor import stats
+
+dataset = "path_to_excel"
+stats.median(dataset,dtype: str,column=['Column1']) 
+```
+
+**Mode**
+
+```python
+from easy_predictor import stats
+
+dataset = "path_to_excel"
+stats.mode(dataset,dtype: str,column=['Column1']) 
+```
+
+**Half**
+
+```python
+from easy_predictor import stats
+
+dataset = "path_to_excel"
+stats.half(dataset,dtype: str,column=['Column1']) # Find half value of each value from Column1
+```
