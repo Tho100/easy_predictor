@@ -145,5 +145,5 @@ stats.mode(dataset,dtype: str,column=['Column1'])
 from easy_predictor import stats
 
 dataset = "path_to_excel"
-stats.half(dataset,dtype: str,column=['Column1']) # Find half value of each value from Column1
+stats.half(dataset,dtype: str,column=['Column1']) # Find half values of each rows from Column1
 ```
