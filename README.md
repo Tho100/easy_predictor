@@ -122,6 +122,7 @@ OUTPUT:
 - Mean
 - Median
 - Mode
+- Half
 
 **Mean**
 
@@ -129,7 +130,8 @@ OUTPUT:
 from easy_predictor import stats
 
 dataset = "path_to_excel"
-stats.mean(dataset,dtype: str,column=['Column1']) 
+model = stats.statistical()
+model.mean(dataset,dtype: str,column=['Column1']) 
 ```
 
 **Median**
@@ -138,7 +140,8 @@ stats.mean(dataset,dtype: str,column=['Column1'])
 from easy_predictor import stats
 
 dataset = "path_to_excel"
-stats.median(dataset,dtype: str,column=['Column1']) 
+model = stats.statistical()
+model.median(dataset,dtype: str,column=['Column1']) 
 ```
 
 **Mode**
@@ -147,7 +150,8 @@ stats.median(dataset,dtype: str,column=['Column1'])
 from easy_predictor import stats
 
 dataset = "path_to_excel"
-stats.mode(dataset,dtype: str,column=['Column1']) 
+model = stats.statistical()
+model.mode(dataset,dtype: str,column=['Column1']) 
 ```
 
 **Half**
@@ -156,7 +160,8 @@ stats.mode(dataset,dtype: str,column=['Column1'])
 from easy_predictor import stats
 
 dataset = "path_to_excel"
-stats.half(dataset,dtype: str,column=['Column1']) # Find half values of each rows from Column1
+model = stats.statistical()
+model.half(dataset,dtype: str,column=['Column1']) # Find half values of each rows from Column1
 ```
 
 
