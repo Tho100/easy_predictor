@@ -17,7 +17,8 @@ pip install easy-predictor
 from easy_predictor import linear 
 
 dataset = "path_to_excel_file"
-linear.predict(dataset,dtype: str,column_x: list[str],value: list[int],column_y)
+model = linear.linear_regression()
+model.predict(dataset,data_type: str,column_x: list[str],value: list[int],column_y: str)
 ```
 2. Text Classification Prediction
 
@@ -25,7 +26,9 @@ linear.predict(dataset,dtype: str,column_x: list[str],value: list[int],column_y)
 from easy_predictor import classification
 
 dataset = "path_to_excel_file"
-classification.predict(dataset,dtype: str,column_x: list[str],value: list[str],column_y)
+model = classification.classification()
+model.predict(dataset,data_type: str,column_x: list[str],value: list[int],column_y: str)
+
 ```
 
 3. Visualize Excel Data In Tabular Form
@@ -40,13 +43,18 @@ table.tabulator(dataset,dtype: str,columns=list[str])
 ## Example (Linear Regression)
 ```python
 from easy_predictor import linear
+from easy_predictor import linear
 
 dataset = "C:\\users\\USER\\Documents\\Dataset_file\\scores_pred.xlsx"
-linear.predict(dataset,
-              data_type='xlsx',
-              input_col=['Study Hour'],
-              value=[15]
-              output_col='Scores')
+model = linear.linear_regression()
+model.predict(
+    data=dataset,
+    data_type='xlsx',
+    input_col=['Scores'],
+    value=[500],
+    output_col='Hour Study'
+)
+
 OUTPUT: [[62.]]
 ```
 
@@ -55,17 +63,19 @@ OUTPUT: [[62.]]
 from easy_predictor import classification
 
 dataset = "C:\\users\\USER\\Documents\\Dataset_file\\sentiment_tf.xlsx"
-classification.predict(dataset,
-                      data_type='xlsx',
-                      input_col=['Text'],
-                      value=['I hate it!'],
-                      output_col='Sentiment')
+model = classification.classification()
+model.predict(dataset,
+              data_type='xlsx',
+              input_col=['Text'],
+              value=['I hate it!'],
+              output_col='Sentiment')
 
 OUTPUT: ['NEGATIVE']
 ```
 # Multiple Inputs (Classification)
 ```python
-classification.predict(dataset,
+model = classification.classification()
+model.predict(dataset,
                       'xlsx',
                        input_col=['Text'],
                        value=['Good stuff','Very Bad','Awesome'],
@@ -75,7 +85,8 @@ OUTPUT: ['POSITIVE','NEGATIVE','POSITIVE']
 ```
 # Multiple Inputs (Linear Regression)
 ```python
-linear.predict(dataset,
+model = linear.linear_regression()
+model.predict(dataset,
               'xlsx',
               input_col=['Study Hour'],
               value=[12.2,5,9],
@@ -147,3 +158,9 @@ from easy_predictor import stats
 dataset = "path_to_excel"
 stats.half(dataset,dtype: str,column=['Column1']) # Find half values of each rows from Column1
 ```
+
+
+## Latest Update (0.6.6)
+
+- **User now can assign a variable to predicted value**
+- **Bug Fixed**
