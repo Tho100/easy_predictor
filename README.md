@@ -43,7 +43,6 @@ table.tabulator(dataset,dtype: str,columns=list[str])
 ## Example (Linear Regression)
 ```python
 from easy_predictor import linear
-from easy_predictor import linear
 
 dataset = "C:\\users\\USER\\Documents\\Dataset_file\\scores_pred.xlsx"
 model = linear.linear_regression()
